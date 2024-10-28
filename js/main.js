@@ -65,9 +65,64 @@
 // console.log(value)
 
 
-let message = "Hello!"
-let phrase = message
-message = "hi"
+// Callback function
 
-console.log(message)
-console.log(phrase)
+// const nums = [1,2,3,4,5]
+
+// function callback(index, value) {
+//     console.log(`Số ${value} ở vị trí ${index}`)
+// }
+
+// nums.forEach((index, value) => (console.log(`Số ${value} ở vị trí ${index}`)))
+
+// Promiss
+
+const pFunc = () => (
+    new Promise ((resolve, reject) => {
+            setTimeout(()=>{
+                resolve(a)
+            }, 1000)
+            setTimeout(()=>{
+                reject('loi')
+            }, 1000)
+        })
+    
+)
+
+
+
+// const value = pFunc()
+//     .then((value)=>{
+//         console.log(value)
+//     })  
+//     // .then((a) => (
+
+//     //     // console.log(a)
+//     // ))
+    
+//     .catch((error)=> {
+//         console.log(error)
+//         return 100
+// })  
+//     .finally(() => {
+//         console.log('xong')
+//     })
+
+// value.catch((value)=> {
+//     console.log(value) 
+// })
+
+// Async / Await
+
+const handle = async() => {
+    try {
+        const value = await pFunc()
+        console.log(value)
+    } catch (error) {
+        console.log(error)
+    } finally{
+        console.log('xong')
+    }
+}
+
+handle()

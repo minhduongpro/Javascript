@@ -1,5 +1,10 @@
-import react3, {func, value as value1} from "./React.js";
+const h1 = document.getElementsByTagName('h1')[0]
+h1.style.color = 'red'
 
-console.log(react3)
-console.log(value1)
-func('ow ddaay')
+const h2 = document.createElement('h2')
+h2.textContent = "I am MinhDuong"
+
+console.log(document.getElementsByTagName('h2')[0])
+document.body.appendChild(h2)
+const text = h2.outerHTML
+console.log(text)
